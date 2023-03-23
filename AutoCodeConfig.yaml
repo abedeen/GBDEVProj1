@@ -7919,12 +7919,12 @@ generators:
     methods: ""
     denyRoles: ""
     allowRoles: ""
-    pathPatterns: "GET:/api/v1/bank-account"
+    pathPatterns: ""
     resourceSamples: ""
     queryParams: ""
     bodyProperties: ""
     assertionInclude: null
-    assertionExclude: "email"
+    assertionExclude: null
   authors: ""
   abacResources: null
   category: "PII"

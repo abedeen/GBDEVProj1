@@ -20,6 +20,7 @@ assertions:
 - '@StatusCode != 404'
 - '@Response.$..jobTitle != @PlainText'
 - '@Response.$..id != @PlainText'
+- '@Response.$..email != @PlainText'
 - '@Response.$..org != @PlainText'
 - '@Response.$..users != @PlainText'
 - '@Response.$..name != @PlainText'

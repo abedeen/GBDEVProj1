@@ -37,8 +37,8 @@ assertions:
 - '@Response.$..branchName != @PlainText'
 - '@Response.$..messages != @PlainText'
 - '@Response.$..faxNumber != @PlainText'
-- '@Response.$..id != @PlainText'
 - '@Response.$..branchType != @PlainText'
+- '@Response.$..id != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii
