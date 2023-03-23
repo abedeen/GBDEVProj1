@@ -21,11 +21,10 @@ assertions:
 - '@Response.$..jobTitle != @PlainText'
 - '@Response.$..password != @PlainText'
 - '@Response.$..id != @PlainText'
-- '@Response.$..email != @PlainText'
 - '@Response.$..name != @PlainText'
 - '@Response.$..messages != @PlainText'
-- '@Response.$..accountNonExpired != @PlainText'
 - '@Response.$..location != @PlainText'
+- '@Response.$..accountNonExpired != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii
