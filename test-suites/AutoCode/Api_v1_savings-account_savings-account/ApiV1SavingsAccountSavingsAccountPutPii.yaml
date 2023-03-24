@@ -43,16 +43,9 @@ useCategoryAssertion: false
 assertions:
 - '@StatusCode != 404'
 - '@Response.$..accountNumber != @PlainText'
-- '@Response.$..name != @PlainText'
 - '@Response.$..messages != @PlainText'
-- '@Response.$..id != @PlainText'
 - '@Response.$..accountBalance != @PlainText'
-- '@Response.$..user != @PlainText'
-- '@Response.$..id != @PlainText'
-- '@Response.$..name != @PlainText'
-- '@Response.$..user != @PlainText'
-- '@Response.$..status != @PlainText'
-- '@Response.$..name != @PlainText'
+- '@Response.$.. != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii

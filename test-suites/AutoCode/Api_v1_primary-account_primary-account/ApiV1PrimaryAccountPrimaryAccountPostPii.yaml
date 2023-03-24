@@ -38,13 +38,8 @@ assertions:
 - '@Response.$..accountType != @PlainText'
 - '@Response.$..accountNumber != @PlainText'
 - '@Response.$..messages != @PlainText'
-- '@Response.$..id != @PlainText'
 - '@Response.$..accountBalance != @PlainText'
-- '@Response.$..id != @PlainText'
-- '@Response.$..name != @PlainText'
-- '@Response.$..user != @PlainText'
-- '@Response.$..status != @PlainText'
-- '@Response.$..name != @PlainText'
+- '@Response.$.. != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii

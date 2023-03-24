@@ -21,12 +21,7 @@ assertions:
 - '@Response.$..transactionType != @PlainText'
 - '@Response.$..messages != @PlainText'
 - '@Response.$..location != @PlainText'
-- '@Response.$..id != @PlainText'
-- '@Response.$..id != @PlainText'
-- '@Response.$..name != @PlainText'
-- '@Response.$..user != @PlainText'
-- '@Response.$..status != @PlainText'
-- '@Response.$..name != @PlainText'
+- '@Response.$.. != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii

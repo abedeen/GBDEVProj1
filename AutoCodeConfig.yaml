@@ -2,6 +2,34 @@
 genPolicy: "None"
 openAPISpec: null
 generators:
+- type: "amazon_rds_sql_injection"
+  owner: "Default"
+  assertions:
+  - "@ResponseTime < 7000"
+  - "@StatusCode != 404"
+  tags:
+  - "OWASP A1"
+  - "[PCI DSS 3.0] 6.5.1"
+  - "OWASP - OTG-INPVAL-005"
+  - "FX TOP 10 - API VULNERABILITY"
+  - "INTRUSIVE "
+  severity: "Medium"
+  database: null
+  inactive: true
+  matches: []
+  authors: ""
+  abacResources: null
+  category: "amazon_rds_sql_injection"
+  customType: "Injection"
+  useCategoryAssertion: null
+  addOptionalParams: null
+  categoryGroup: null
+  payloads: null
+  customHeaders: null
+  auth: "Default"
+  endpointSelection: "ALL"
+  safeServerUrl: null
+  showResponse: true
 - type: "anonymous_invalid"
   owner: "Default"
   assertions:
@@ -5978,34 +6006,6 @@ generators:
   authors: ""
   abacResources: null
   category: "memsql_sql_injection"
-  customType: "Injection"
-  useCategoryAssertion: null
-  addOptionalParams: null
-  categoryGroup: null
-  payloads: null
-  customHeaders: null
-  auth: "Default"
-  endpointSelection: "ALL"
-  safeServerUrl: null
-  showResponse: true
-- type: "amazon_rds_sql_injection"
-  owner: "Default"
-  assertions:
-  - "@ResponseTime < 7000"
-  - "@StatusCode != 404"
-  tags:
-  - "OWASP A1"
-  - "[PCI DSS 3.0] 6.5.1"
-  - "OWASP - OTG-INPVAL-005"
-  - "FX TOP 10 - API VULNERABILITY"
-  - "INTRUSIVE "
-  severity: "Medium"
-  database: null
-  inactive: true
-  matches: []
-  authors: ""
-  abacResources: null
-  category: "amazon_rds_sql_injection"
   customType: "Injection"
   useCategoryAssertion: null
   addOptionalParams: null
@@ -13837,9 +13837,9 @@ generators:
   - name: ""
     value: null
     methods: ""
-    denyRoles: "email"
-    allowRoles: "id,name,user,status,name"
-    pathPatterns: "PUT:/api/v1/bank-account"
+    denyRoles: "id,user,status,name,email"
+    allowRoles: ""
+    pathPatterns: "POST:/api/v1/bank-account"
     resourceSamples: ""
     queryParams: ""
     bodyProperties: ""

@@ -1,15 +1,15 @@
 ---
-parent: Api_v1_users_personal-sign-up
-name: ApiV1UsersPersonalSignUpPostPii
+parent: Api_v1_bank-account
+name: ApiV1BankAccountPutPii
 description: null
 authors:
 - apisec Bot
 type: SUITE
 init: []
 localVariables: []
-path: /api/v1/users/personal-sign-up
-endpoint: /api/v1/users/personal-sign-up
-method: POST
+path: /api/v1/bank-account
+endpoint: /api/v1/bank-account
+method: PUT
 auth: Default
 headers:
 - 'Accept: application/json'
@@ -18,31 +18,33 @@ testCases:
 - id: 1
   body: |-
     {
-      "accountNonExpired" : false,
-      "accountNonLocked" : false,
-      "company" : "{{@Var.company}}",
+      "accountBalance" : "{{@Var.accountBalance}}",
+      "accountNumber" : "{{@Var.accountNumber}}",
       "createdBy" : "{{@Var.createdBy}}",
       "createdDate" : "{{@Var.createdDate}}",
-      "credentialsNonExpired" : false,
-      "email" : "{{@Var.email}}",
-      "enabled" : false,
       "id" : "{{@Var.id}}",
       "inactive" : false,
-      "jobTitle" : "{{@Var.jobTitle}}",
-      "location" : "{{@Var.location}}",
       "modifiedBy" : "{{@Var.modifiedBy}}",
       "modifiedDate" : "{{@Var.modifiedDate}}",
-      "name" : "{{@Var.name}}",
-      "password" : "{{@Var.password}}",
-      "privileges" : [ "{{@Random}}" ],
-      "username" : "{{@Var.username}}",
+      "user" : {
+        "createdBy" : "{{@Var.createdBy}}",
+        "createdDate" : "{{@Var.createdDate}}",
+        "id" : "{{@Var.id}}",
+        "inactive" : false,
+        "modifiedBy" : "{{@Var.modifiedBy}}",
+        "modifiedDate" : "{{@Var.modifiedDate}}",
+        "name" : "{{@Var.name}}",
+        "version" : "{{@Var.version}}"
+      },
       "version" : "{{@Var.version}}"
     }
   inactive: false
 useCategoryAssertion: false
 assertions:
 - '@StatusCode != 404'
+- '@Response.$..accountNumber != @PlainText'
 - '@Response.$..messages != @PlainText'
+- '@Response.$..accountBalance != @PlainText'
 - '@Response.$.. != @PlainText'
 cleanup: []
 severity: Medium
