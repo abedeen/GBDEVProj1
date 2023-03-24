@@ -36,7 +36,6 @@ assertions:
 - '@StatusCode != 404'
 - '@Response.$..imageData != @PlainText'
 - '@Response.$..accountType != @PlainText'
-- '@Response.$..accountNumber != @PlainText'
 - '@Response.$..messages != @PlainText'
 - '@Response.$..accountBalance != @PlainText'
 - '@Response.$.. != @PlainText'

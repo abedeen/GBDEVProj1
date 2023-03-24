@@ -21,8 +21,8 @@ assertions:
 - '@Response.$..jobTitle != @PlainText'
 - '@Response.$..password != @PlainText'
 - '@Response.$..messages != @PlainText'
-- '@Response.$..location != @PlainText'
 - '@Response.$..accountNonExpired != @PlainText'
+- '@Response.$..location != @PlainText'
 - '@Response.$.. != @PlainText'
 cleanup: []
 severity: Medium

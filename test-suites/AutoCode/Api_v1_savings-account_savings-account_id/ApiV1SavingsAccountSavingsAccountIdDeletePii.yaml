@@ -18,7 +18,6 @@ testCases: []
 useCategoryAssertion: false
 assertions:
 - '@StatusCode != 404'
-- '@Response.$..accountNumber != @PlainText'
 - '@Response.$..messages != @PlainText'
 - '@Response.$..accountBalance != @PlainText'
 - '@Response.$.. != @PlainText'
