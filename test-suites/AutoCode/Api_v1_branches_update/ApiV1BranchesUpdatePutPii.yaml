@@ -37,10 +37,13 @@ assertions:
 - '@Response.$..branchName != @PlainText'
 - '@Response.$..messages != @PlainText'
 - '@Response.$..faxNumber != @PlainText'
-- '@Response.$..id != @PlainText'
 - '@Response.$..branchType != @PlainText'
-- '@Response.$..asif != @PlainText'
-- '@Response.$..kareem != @PlainText'
+- '@Response.$..id != @PlainText'
+- '@Response.$..id != @PlainText'
+- '@Response.$..name != @PlainText'
+- '@Response.$..user != @PlainText'
+- '@Response.$..status != @PlainText'
+- '@Response.$..name != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii

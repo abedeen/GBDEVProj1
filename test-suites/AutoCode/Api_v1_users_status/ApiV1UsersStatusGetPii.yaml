@@ -23,10 +23,13 @@ assertions:
 - '@Response.$..id != @PlainText'
 - '@Response.$..name != @PlainText'
 - '@Response.$..messages != @PlainText'
-- '@Response.$..location != @PlainText'
 - '@Response.$..accountNonExpired != @PlainText'
-- '@Response.$..asif != @PlainText'
-- '@Response.$..kareem != @PlainText'
+- '@Response.$..location != @PlainText'
+- '@Response.$..id != @PlainText'
+- '@Response.$..name != @PlainText'
+- '@Response.$..user != @PlainText'
+- '@Response.$..status != @PlainText'
+- '@Response.$..name != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii
