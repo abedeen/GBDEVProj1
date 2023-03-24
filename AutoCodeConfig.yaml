@@ -2,6 +2,44 @@
 genPolicy: "None"
 openAPISpec: null
 generators:
+- type: "anonymous_invalid"
+  owner: "Default"
+  assertions:
+  - "Allowed:@StatusCode == 200"
+  - "Disallowed:@StatusCode == 401 OR @StatusCode == 403"
+  tags:
+  - "Broken Authentication"
+  - "Non-Intrusive"
+  - "[2020 CWE TOP 24] CWE - 306"
+  - "OWASP-API2"
+  - "OWASP - OTG-AUTHN-002"
+  - "OWASP API Security Top 10"
+  severity: "Critical"
+  database: null
+  inactive: false
+  matches:
+  - name: null
+    value: null
+    methods: null
+    denyRoles: null
+    allowRoles: null
+    pathPatterns: ""
+    resourceSamples: null
+    queryParams: null
+    bodyProperties: null
+  authors: ""
+  abacResources: null
+  category: "Unsecured"
+  customType: "Injection"
+  useCategoryAssertion: null
+  addOptionalParams: null
+  categoryGroup: null
+  payloads: null
+  customHeaders: null
+  auth: null
+  endpointSelection: "ALL"
+  safeServerUrl: null
+  showResponse: true
 - type: "amazon_rds_sql_injection"
   owner: "Default"
   assertions:
@@ -7851,9 +7889,9 @@ generators:
   - name: ""
     value: null
     methods: ""
-    denyRoles: "accountNumber,id,user,status,name,email"
+    denyRoles: "transactionType,accountNumber,id,user,status,name,email"
     allowRoles: ""
-    pathPatterns: "GET:/api/v1/bank-account"
+    pathPatterns: "POST:/api/v1/bank-account"
     resourceSamples: ""
     queryParams: ""
     bodyProperties: ""
@@ -7867,44 +7905,6 @@ generators:
   payloads: null
   customHeaders: null
   auth: "Default"
-  endpointSelection: "ALL"
-  safeServerUrl: null
-  showResponse: true
-- type: "anonymous_invalid"
-  owner: "Default"
-  assertions:
-  - "Allowed:@StatusCode == 200"
-  - "Disallowed:@StatusCode == 401 OR @StatusCode == 403"
-  tags:
-  - "Broken Authentication"
-  - "Non-Intrusive"
-  - "[2020 CWE TOP 24] CWE - 306"
-  - "OWASP-API2"
-  - "OWASP - OTG-AUTHN-002"
-  - "OWASP API Security Top 10"
-  severity: "Critical"
-  database: null
-  inactive: false
-  matches:
-  - name: null
-    value: null
-    methods: null
-    denyRoles: null
-    allowRoles: null
-    pathPatterns: ""
-    resourceSamples: null
-    queryParams: null
-    bodyProperties: null
-  authors: ""
-  abacResources: null
-  category: "Unsecured"
-  customType: "Injection"
-  useCategoryAssertion: null
-  addOptionalParams: null
-  categoryGroup: null
-  payloads: null
-  customHeaders: null
-  auth: null
   endpointSelection: "ALL"
   safeServerUrl: null
   showResponse: true
