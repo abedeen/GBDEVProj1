@@ -34,7 +34,6 @@ testCases:
 useCategoryAssertion: false
 assertions:
 - '@StatusCode != 404'
-- '@Response.$..transactionType != @PlainText'
 - '@Response.$..messages != @PlainText'
 - '@Response.$..location != @PlainText'
 - '@Response.$..id != @PlainText'

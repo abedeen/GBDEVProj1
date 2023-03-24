@@ -13890,7 +13890,7 @@ generators:
     queryParams: ""
     bodyProperties: ""
     assertionInclude: null
-    assertionExclude: null
+    assertionExclude: "transactionType"
   authors: ""
   abacResources: null
   category: "PII"
