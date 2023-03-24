@@ -1,14 +1,14 @@
 ---
-parent: Api_v1_branches_update
-name: ApiV1BranchesUpdatePutPii
+parent: Api_v1_bank-account
+name: ApiV1BankAccountPutPii
 description: null
 authors:
 - apisec Bot
 type: SUITE
 init: []
 localVariables: []
-path: /api/v1/branches/update
-endpoint: /api/v1/branches/update
+path: /api/v1/bank-account
+endpoint: /api/v1/bank-account
 method: PUT
 auth: Default
 headers:
@@ -18,26 +18,35 @@ testCases:
 - id: 1
   body: |-
     {
-      "atmAtBranch" : "{{@Var.atmAtBranch}}",
-      "branchName" : "{{@Var.branchName}}",
-      "branchType" : "{{@Var.branchType}}",
+      "accountBalance" : "{{@Var.accountBalance}}",
+      "accountNumber" : "{{@Var.accountNumber}}",
       "createdBy" : "{{@Var.createdBy}}",
       "createdDate" : "{{@Var.createdDate}}",
-      "faxNumber" : "{{@Var.faxNumber}}",
       "id" : "{{@Var.id}}",
       "inactive" : false,
       "modifiedBy" : "{{@Var.modifiedBy}}",
       "modifiedDate" : "{{@Var.modifiedDate}}",
+      "user" : {
+        "createdBy" : "{{@Var.createdBy}}",
+        "createdDate" : "{{@Var.createdDate}}",
+        "id" : "{{@Var.id}}",
+        "inactive" : false,
+        "modifiedBy" : "{{@Var.modifiedBy}}",
+        "modifiedDate" : "{{@Var.modifiedDate}}",
+        "name" : "{{@Var.name}}",
+        "version" : "{{@Var.version}}"
+      },
       "version" : "{{@Var.version}}"
     }
   inactive: false
 useCategoryAssertion: false
 assertions:
 - '@StatusCode != 404'
-- '@Response.$..branchName != @PlainText'
-- '@Response.$..faxNumber != @PlainText'
-- '@Response.$..branchType != @PlainText'
+- '@Response.$..accountNumber != @PlainText'
+- '@Response.$..name != @PlainText'
 - '@Response.$..id != @PlainText'
+- '@Response.$..accountBalance != @PlainText'
+- '@Response.$..user != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii

@@ -13885,12 +13885,12 @@ generators:
     methods: ""
     denyRoles: ""
     allowRoles: ""
-    pathPatterns: "PUT:/api/v1/bank-account"
+    pathPatterns: "PUT:/api/v1/bank-account/deposit-amount"
     resourceSamples: ""
     queryParams: ""
     bodyProperties: ""
     assertionInclude: null
-    assertionExclude: "transactionType"
+    assertionExclude: "messages,transactionType"
   authors: ""
   abacResources: null
   category: "PII"

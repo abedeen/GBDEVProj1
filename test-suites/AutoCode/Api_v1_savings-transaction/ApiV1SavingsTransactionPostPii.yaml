@@ -46,7 +46,6 @@ useCategoryAssertion: false
 assertions:
 - '@StatusCode != 404'
 - '@Response.$..name != @PlainText'
-- '@Response.$..messages != @PlainText'
 - '@Response.$..id != @PlainText'
 - '@Response.$..user != @PlainText'
 - '@Response.$..status != @PlainText'

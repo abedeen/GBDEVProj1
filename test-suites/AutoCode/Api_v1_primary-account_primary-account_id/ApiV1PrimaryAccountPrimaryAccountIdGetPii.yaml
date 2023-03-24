@@ -21,7 +21,6 @@ assertions:
 - '@Response.$..imageData != @PlainText'
 - '@Response.$..accountType != @PlainText'
 - '@Response.$..accountNumber != @PlainText'
-- '@Response.$..messages != @PlainText'
 - '@Response.$..id != @PlainText'
 - '@Response.$..accountBalance != @PlainText'
 cleanup: []
