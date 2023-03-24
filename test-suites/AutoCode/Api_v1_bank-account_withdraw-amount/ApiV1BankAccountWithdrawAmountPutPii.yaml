@@ -42,6 +42,9 @@ testCases:
 useCategoryAssertion: false
 assertions:
 - '@StatusCode != 404'
+- '@Response.$..messages != @PlainText'
+- '@Response.$..asif != @PlainText'
+- '@Response.$..kareem != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii

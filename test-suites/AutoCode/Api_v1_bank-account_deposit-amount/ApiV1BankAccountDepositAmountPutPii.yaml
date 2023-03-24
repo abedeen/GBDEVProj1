@@ -1,15 +1,15 @@
 ---
-parent: Api_v1_orgs_branchid_users_userid_reset-password
-name: ApiV1OrgsBranchidUsersUseridResetPasswordPostPii
+parent: Api_v1_bank-account_deposit-amount
+name: ApiV1BankAccountDepositAmountPutPii
 description: null
 authors:
 - apisec Bot
 type: SUITE
 init: []
 localVariables: []
-path: /api/v1/orgs/{branchId}/users/{userId}/reset-password
-endpoint: /api/v1/orgs/{{@Var.branchId}}/users/{{@Var.userId}}/reset-password
-method: POST
+path: /api/v1/bank-account/deposit-amount
+endpoint: /api/v1/bank-account/deposit-amount
+method: PUT
 auth: Default
 headers:
 - 'Accept: application/json'
@@ -18,19 +18,24 @@ testCases:
 - id: 1
   body: |-
     {
-      "confirmPassword" : "{{@Var.confirmPassword}}",
+      "accountBalance" : "{{@Var.accountBalance}}",
+      "accountNumber" : "{{@Var.accountNumber}}",
       "createdBy" : "{{@Var.createdBy}}",
       "createdDate" : "{{@Var.createdDate}}",
-      "email" : "{{@Var.email}}",
       "id" : "{{@Var.id}}",
       "inactive" : false,
       "modifiedBy" : "{{@Var.modifiedBy}}",
       "modifiedDate" : "{{@Var.modifiedDate}}",
-      "name" : "{{@Var.name}}",
-      "orgId" : "{{@Var.orgId}}",
-      "orgRole" : "{{@Var.orgRole}}",
-      "password" : "{{@Var.password}}",
-      "username" : "{{@Var.username}}",
+      "user" : {
+        "createdBy" : "{{@Var.createdBy}}",
+        "createdDate" : "{{@Var.createdDate}}",
+        "id" : "{{@Var.id}}",
+        "inactive" : false,
+        "modifiedBy" : "{{@Var.modifiedBy}}",
+        "modifiedDate" : "{{@Var.modifiedDate}}",
+        "name" : "{{@Var.name}}",
+        "version" : "{{@Var.version}}"
+      },
       "version" : "{{@Var.version}}"
     }
   inactive: false

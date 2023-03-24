@@ -44,9 +44,12 @@ assertions:
 - '@StatusCode != 404'
 - '@Response.$..accountNumber != @PlainText'
 - '@Response.$..name != @PlainText'
+- '@Response.$..messages != @PlainText'
 - '@Response.$..id != @PlainText'
 - '@Response.$..accountBalance != @PlainText'
 - '@Response.$..user != @PlainText'
+- '@Response.$..asif != @PlainText'
+- '@Response.$..kareem != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii

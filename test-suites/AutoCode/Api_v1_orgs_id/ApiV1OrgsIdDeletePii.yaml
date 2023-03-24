@@ -21,8 +21,11 @@ assertions:
 - '@Response.$..orgType != @PlainText'
 - '@Response.$..billingEmail != @PlainText'
 - '@Response.$..name != @PlainText'
+- '@Response.$..messages != @PlainText'
 - '@Response.$..location != @PlainText'
 - '@Response.$..id != @PlainText'
+- '@Response.$..asif != @PlainText'
+- '@Response.$..kareem != @PlainText'
 cleanup: []
 severity: Medium
 category: Pii
